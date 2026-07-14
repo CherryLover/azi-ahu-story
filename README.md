@@ -2,6 +2,11 @@
 
 交互式绘本故事站：循序展开 10 个场景，文字默认隐藏、点击后逐行浮现。
 
+## 在线访问
+
+- 主站（Cloudflare）：<https://azi-ahu.flyooo.uk>
+- 镜像站（GitHub Pages）：<https://cherrylover.github.io/azi-ahu-story/>
+
 ## 本地预览
 
 ```bash
