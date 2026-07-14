@@ -11,11 +11,21 @@ npx wrangler dev
 
 ## 部署
 
+两处同步发布，共用 `public/` 目录与同一份 R2 图片资源。
+
+### Cloudflare（主站，自定义域名）
+
 ```bash
 npx wrangler deploy
 ```
 
-- 站点：https://azi-ahu.flyooo.uk  
+- 站点：https://azi-ahu.flyooo.uk
+
+### GitHub Pages（镜像站，自动部署）
+
+- 推送到 `main` 后由 `.github/workflows/deploy-pages.yml` 自动构建发布
+- 站点：https://cherrylover.github.io/azi-ahu-story/
+
 - 图片：Cloudflare R2 `s3-hono` → 公开域名 `https://s3-store.flyooo.uk/story/azi-ahu/`
 
 ## 交互
