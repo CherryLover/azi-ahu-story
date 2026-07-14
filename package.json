@@ -1,0 +1,9 @@
+{
+  "name": "azi-ahu-story",
+  "private": true,
+  "description": "阿紫与阿虎 — 交互式绘本故事站",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "azi-ahu-story",
+  "compatibility_date": "2026-07-13",
+  "assets": {
+    "directory": "./public"
+  },
+  "routes": [
+    {
+      "pattern": "azi-ahu.flyooo.uk",
+      "custom_domain": true
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="阿紫与阿虎 — 从雾中初见到并肩同行的绘本故事" />
+  <meta name="theme-color" content="#2b1a36" />
+  <title>阿紫与阿虎</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Noto+Serif+SC:wght@400;500&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%232b1a36'/%3E%3Ccircle cx='32' cy='32' r='10' fill='%23c9a06a'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <div class="sky" id="sky" aria-hidden="true"></div>
+  <div class="motes" id="motes" aria-hidden="true"></div>
+
+  <div class="app" id="app">
+    <header class="topbar">
+      <div class="brand">阿紫与阿虎</div>
+      <nav class="progress" id="progress" aria-label="章节进度"></nav>
+    </header>
+
+    <main class="stage">
+      <!-- 序章：点击进入后才会离开 -->
+      <section class="prologue" id="prologue" aria-label="序章">
+        <div class="prologue-card">
+          <p class="prologue-kicker">A Story of Companionship</p>
+          <h1 id="pro-title">阿紫与阿虎</h1>
+          <p class="prologue-sub" id="pro-sub">从雾中初见到并肩同行</p>
+          <ul class="prologue-lines" id="pro-lines" aria-live="polite"></ul>
+          <button type="button" class="btn-enter" id="btn-enter">
+            进入故事 <span class="arrow" aria-hidden="true">→</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- 章节舞台：一次只展示一章 -->
+      <article class="chapter" id="chapter" aria-live="polite">
+        <div class="frame" id="frame" title="点击放大">
+          <img id="chapter-img" alt="" width="1200" height="900" decoding="async" />
+          <span class="frame-meta" id="frame-meta"></span>
+        </div>
+        <div class="panel">
+          <p class="chapter-no" id="chapter-no"></p>
+          <h2 class="chapter-title" id="chapter-title"></h2>
+          <p class="chapter-mood" id="chapter-mood"></p>
+
+          <!-- 操作区紧贴标题，避免正文未展开时被大片留白挤到下方 -->
+          <div class="actions">
+            <button type="button" class="btn btn-primary" id="btn-reveal">展开叙述</button>
+            <button type="button" class="btn btn-ghost" id="btn-prev">上一幕</button>
+            <button type="button" class="btn btn-ghost" id="btn-next" disabled>下一幕</button>
+          </div>
+          <p class="hint" id="hint">点击「展开」或按空格，文字会一行行浮现</p>
+
+          <div class="reveal-area">
+            <ul class="lines" id="lines"></ul>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="bottombar">
+      <span id="footer-left">键盘 ← → 翻页 · 空格展开</span>
+      <span id="footer-right"></span>
+    </footer>
+  </div>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="大图">
+    <img id="lightbox-img" alt="" />
+  </div>
+  <div class="end-note" id="end-note">故事会继续 · 冰淇淋还会再开摊</div>
+
+  <script type="module" src="/assets/app.js"></script>
+</body>
+</html>
